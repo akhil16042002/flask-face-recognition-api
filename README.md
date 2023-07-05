@@ -4,20 +4,40 @@ This is a Flask-based API that performs face recognition on a video file using t
 
 ## Installation
 
+### Requirements
+
+-Python 3.3+ or Python 2.7
+-Linux
+
+
 To run this API, follow these steps:
 
-1. Install the required dependencies by running the following command:
+1. Click the [here](https://github.com/ageitgey/face_recognition) to install face_recognition 
+
+2. Install flask by running the following command:
 
    ```bash
-   pip install flask opencv-python-headless face_recognition
+   pip install flask
    ```
 
-2. Save the provided code into a Python file, e.g., `face_recognition_api.py`.
-
-3. Execute the Python file to start the API server:
+3. Install OpenCV by running the following command:
 
    ```bash
-   python face_recognition_api.py
+   pip install opencv-python
+   ```
+
+4. Install numpy by running the following command:
+
+   ```bash
+   pip install numpy
+   ```
+
+5. Save the provided code into a Python file, e.g., `face_recognition_api.py`.
+
+6. Execute the Python file to start the API server:
+
+   ```bash
+   python3 face_recognition_api.py
    ```
 
    The API server will run on `http://localhost:2000`.
@@ -31,8 +51,8 @@ To run this API, follow these steps:
 **Method**: `POST`
 
 **Parameters**:
-- `image`: The image file containing the known face. (Type: File)
-- `video`: The video file to perform face recognition on. (Type: File)
+- `image`: The image file containing the known face. (Type: .png File)
+- `video`: The video file to perform face recognition on. (Type: . mp4 File)
 
 **Example**:
 
@@ -64,8 +84,9 @@ The API responds with a JSON object containing the result of the face recognitio
 
 ## Limitations
 
-- The API currently only supports one known face. If there are multiple known faces in the image, it will only consider the first face detected.
+- The API currently only supports .png files for images and .mp4 files for videos. You may need to adjust this value based on your specific use case.
 - The API uses a tolerance of 0.50 for comparing face encodings. You may need to adjust this value based on your specific use case to achieve better results.
+- The API currently checks one in every five frames to perform the analysis. You may need to adjust this value based on your specific use case.
 
 ## Conclusion
 
