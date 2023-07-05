@@ -7,7 +7,7 @@ This is a Flask-based API that performs face recognition on a video file using t
 ### Requirements
 
 - Python 3.3+ or Python 2.7
-- Linux
+- Linux (recommended)
 
 
 To run this API, follow these steps:
