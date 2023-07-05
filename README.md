@@ -12,7 +12,7 @@ This is a Flask-based API that performs face recognition on a video file using t
 
 To run this API, follow these steps:
 
-1. Click the [here](https://github.com/ageitgey/face_recognition) to install face_recognition 
+1. Click [here](https://github.com/ageitgey/face_recognition) to install face_recognition 
 
 2. Install flask by running the following command:
 
